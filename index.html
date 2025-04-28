@@ -794,6 +794,44 @@
             }
             
         }
+        .skills-infographic {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+/* Animation when scrolling to the section */
+.skills-infographic.in-view .skill-level {
+    animation: fillBars 2s ease-out forwards;
+}
+
+@keyframes fillBars {
+    from { width: 0; }
+    to { width: var(--target-width); }
+}
     </style>
 </head>
 <body>
@@ -868,6 +906,50 @@
                     <span class="skill">Network Security</span>
                     <span class="skill">Digital Forensics</span>
                     <span class="skill">Ethical Hacking</span>
+                </div>
+
+                <div class="skills-infographic">
+                    <h3>Technical Skills</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%; background-color: #3572A5;"></div>
+                        </div>
+                    </div>
+                
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Network Security</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%; background-color: #4CC790;"></div>
+                        </div>
+                    </div>
+                
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Java</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%; background-color: #F89820;"></div>
+                        </div>
+                    </div>
+                
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Ethical Hacking</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%; background-color: #1679C1;"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
